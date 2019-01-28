@@ -17,11 +17,14 @@
       <li>Inside the seasons folders place the episodes.</li>
       <li>Run the server:
         <ol>
+          <li>If you are on windows make sure you run commands with git bash or they may not work.</li>
+          <li>Make sure you have Node.js and npm installed.</li>
+          <li>Run 'npm run setup'</li>
           <li>Run 'npm run build'</li>
-          <li>Run 'npm run start PORT production' (Replace PORT with the port you want the server to run on)</li>
+          <li>Run 'node server.js PORT production' (Replace PORT with the port you want the server to run on).</li>
         </ol>
       </li>
-      <li>Visit the site in a web browser</li>
+      <li>Visit the site in a web browser.</li>
       <li>Enjoy watching!</li>
     </ol>
   </div>

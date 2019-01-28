@@ -10,7 +10,10 @@ Created by: MrTj458
 3. Inside the show's folder make folders named with the season numbers.
 4. Inside the seasons folders place the episodes.
 5. Run the server:
-   1. Run 'npm run build'
-   2. Run 'npm run start PORT production' (Replace PORT with the port you want the server to run on)
-6. Visit the site in a web browser
+   1. If you are on windows make sure you run commands with git bash or they may not work.
+   2. Make sure you have Node.js and npm installed.
+   3. Run 'npm run setup'
+   4. Run 'npm run build'
+   5. Run 'node server.js PORT production' (Replace PORT with the port you want the server to run on).
+6. Visit the site in a web browser.
 7. Enjoy watching!

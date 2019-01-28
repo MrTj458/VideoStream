@@ -10,9 +10,9 @@
 	},
 	"devDependencies": {},
 	"scripts": {
-		"start": "node server.js",
-		"startProd": "node server.js 3000 production",
-		"build": "cd client && npm run build && cd .. && cp -r ./client/dist/. ./public"
+		"setup": "npm install && cd client && npm install",
+		"build": "cd client && npm run build && cd .. && cp -r ./client/dist/. ./public",
+		"start": "node server.js"
 	},
 	"author": "",
 	"license": "MIT"
