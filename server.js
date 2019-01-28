@@ -1,10 +1,13 @@
 const express = require('express')
 const cors = require('cors')
 const fs = require('fs')
+const compression = require('compression')
 const app = express()
 
-const PORT = process.env.PORT
+const PORT = parseInt(process.argv[2]) || 3000
+process.env.NODE_ENV = process.argv[3] || 'development'
 
+app.use(compression())
 app.use(cors())
 app.use('/', express.static('public'))
 
@@ -59,5 +62,6 @@ app.get('/api/video', (req, res) => {
 })
 
 app.listen(PORT, () => {
+	console.log(`Server started in ${process.env.NODE_ENV} mode.`)
 	console.log(`Rinning on port ${PORT}`)
 })

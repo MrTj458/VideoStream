@@ -4,12 +4,14 @@
 	"description": "Video Stream Site",
 	"main": "server.js",
 	"dependencies": {
+		"compression": "^1.7.3",
 		"cors": "^2.8.5",
 		"express": "^4.16.4"
 	},
 	"devDependencies": {},
 	"scripts": {
-		"start": "PORT=80 node server.js",
+		"start": "node server.js",
+		"startProd": "node server.js 3000 production",
 		"build": "cd client && npm run build && cd .. && cp -r ./client/dist/. ./public"
 	},
 	"author": "",
