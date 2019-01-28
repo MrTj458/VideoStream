@@ -1,0 +1,17 @@
+{
+	"name": "videostream",
+	"version": "1.0.0",
+	"description": "Video Stream Site",
+	"main": "server.js",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.16.4"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"start": "PORT=80 node server.js",
+		"build": "cd client && npm run build && cd .. && cp -r ./client/dist/. ./public"
+	},
+	"author": "",
+	"license": "MIT"
+}
