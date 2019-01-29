@@ -1,6 +1,6 @@
 # This is a very basic video hosting app.
 
-It is intended to be used by people that want to host their own video files
+It is intended to be used by people that want to host their own video files<br><br>
 Created by: MrTj458
 
 ## How to use
