@@ -1,6 +1,6 @@
 <template>
   <div class="video">
-    <h3>{{ this.$route.query.n }} Season: {{ this.$route.query.s }} Episode: {{ this.$route.query.e }}</h3>
+    <h4>{{ this.$route.query.n }} Season: {{ this.$route.query.s }} Episode: {{ this.$route.query.e }}</h4>
     <video controls controlslist="nodownload">
       <source v-bind:src="src" typ="video/mp4">
     </video>
@@ -37,5 +37,7 @@ video {
   padding: 0;
   width: 70%;
   height: 30%;
+  border: solid 2px gray;
+  border-radius: 2px;
 }
 </style>

@@ -8,8 +8,10 @@
       View on
       <a href="https://github.com/MrTj458/VideoStream" target="_blank">Github</a>
     </p>
+
     <hr>
-    <h3>How to use</h3>
+
+    <h3>How To Use</h3>
     <ol>
       <li>Create a folder called 'videos' in the root of the app.</li>
       <li>Inside the video folder make a folder with the name of the show.</li>
