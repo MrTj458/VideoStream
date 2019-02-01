@@ -4,7 +4,18 @@
     <video ref="videoElement" v-on:click="togglePause">
       <source v-bind:src="src" typ="video/mp4">
     </video>
-    <button v-on:click="togglePause">Pause / Play</button>
+    
+    <label for="volume">Volume</label>
+    <input
+      id="volume"
+      name="volume"
+      type="range"
+      min="0"
+      max="1"
+      step="0.01"
+      v-model="volume"
+      v-on:change="changeVolume"
+    >
   </div>
 </template>
 
@@ -15,18 +26,25 @@ export default {
     return {
       src: `/api/video?n=${this.$route.query.n}&s=${this.$route.query.s}&e=${
         this.$route.query.e
-      }`
+      }`,
+      videoPlayer: null,
+      volume: 1
     };
   },
   methods: {
     togglePause() {
-      const videoPlayer = this.$refs.videoElement;
-      if (videoPlayer.paused) {
-        videoPlayer.play();
+      if (this.videoPlayer.paused) {
+        this.videoPlayer.play();
       } else {
-        videoPlayer.pause();
+        this.videoPlayer.pause();
       }
+    },
+    changeVolume() {
+      this.videoPlayer.volume = this.volume;
     }
+  },
+  mounted() {
+    this.videoPlayer = this.$refs.videoElement;
   }
 };
 </script>
@@ -50,5 +68,8 @@ video {
   height: 30%;
   border: solid 2px gray;
   border-radius: 2px;
+}
+#volume {
+  width: 100px;
 }
 </style>
