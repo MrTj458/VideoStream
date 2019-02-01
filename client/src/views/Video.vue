@@ -1,9 +1,10 @@
 <template>
   <div class="video">
     <h4>{{ this.$route.query.n }} Season: {{ this.$route.query.s }} Episode: {{ this.$route.query.e }}</h4>
-    <video controls controlslist="nodownload">
+    <video ref="videoElement" v-on:click="togglePause">
       <source v-bind:src="src" typ="video/mp4">
     </video>
+    <button v-on:click="togglePause">Pause / Play</button>
   </div>
 </template>
 
@@ -16,6 +17,16 @@ export default {
         this.$route.query.e
       }`
     };
+  },
+  methods: {
+    togglePause() {
+      const videoPlayer = this.$refs.videoElement;
+      if (videoPlayer.paused) {
+        videoPlayer.play();
+      } else {
+        videoPlayer.pause();
+      }
+    }
   }
 };
 </script>
